@@ -50,6 +50,10 @@ COCO_WEIGHTS_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
 # through the command line argument --logs
 DEFAULT_LOGS_DIR = os.path.join(ROOT_DIR, "logs")
 
+dataset_dir = os.path.join(ROOT_DIR, "samples")
+dataset_dir = os.path.join(dataset_dir, "gold_chips")
+dataset_dir = os.path.join(dataset_dir, "dataset")
+
 ############################################################
 #  Configurations
 ############################################################
@@ -302,10 +306,11 @@ if __name__ == '__main__':
                         metavar="<command>",
                         help="'train' or 'splash'")
     parser.add_argument('--dataset', required=False,
+                        default = dataset_dir,
                         metavar="/path/to/custom/dataset/",
                         help='Directory of the custom dataset')
     parser.add_argument('--weights', required=True,
-                        metavar="/path/to/weights.h5",
+                        metavar="coco",
                         help="Path to weights .h5 file or 'coco'")
     parser.add_argument('--logs', required=False,
                         default=DEFAULT_LOGS_DIR,
