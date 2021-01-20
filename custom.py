@@ -137,7 +137,7 @@ class CustomDataset(utils.Dataset):
             #Add the classes according to the requirement
             for n in custom:
                 try:
-                    if n['label']=='chips':
+                    if n['label']=='chip':
                         num_ids.append(1)
                     elif n['label']=='anomalies':
                         num_ids.append(2)
