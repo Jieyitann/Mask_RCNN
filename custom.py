@@ -51,8 +51,8 @@ COCO_WEIGHTS_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
 DEFAULT_LOGS_DIR = os.path.join(ROOT_DIR, "logs")
 
 dataset_dir_ = os.path.join(ROOT_DIR, "samples")
-dataset_dir_ = os.path.join(dataset_dir, "gold_chips")
-dataset_dir_ = os.path.join(dataset_dir, "dataset")
+dataset_dir_ = os.path.join(dataset_dir_, "gold_chips")
+dataset_dir_ = os.path.join(dataset_dir_, "dataset")
 
 ############################################################
 #  Configurations
