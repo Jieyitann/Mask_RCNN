@@ -64,7 +64,7 @@ class CustomConfig(Config):
     Derives from the base Config class and overrides some values.
     """
     # Give the configuration a recognizable name
-    NAME = "custom"
+    NAME = "gold_chip"
 
     # We use a GPU with 12GB memory, which can fit two images.
     # Adjust down if you use a smaller GPU.
@@ -74,10 +74,11 @@ class CustomConfig(Config):
     NUM_CLASSES = 1 + 2  # Background + number of classes (Here, 2)
 
     # Number of training steps per epoch
-    STEPS_PER_EPOCH = 100
+    STEPS_PER_EPOCH = 10 #CHANGED FROM 100
 
     # Skip detections with < 90% confidence
     DETECTION_MIN_CONFIDENCE = 0.9
+    VALIDATION_STEPS = 5 # ADDED BY ME
 
 
 ############################################################
